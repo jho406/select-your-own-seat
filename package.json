@@ -2,6 +2,8 @@
   "name": "select_your_own_seat",
   "private": true,
   "dependencies": {
+    "@babel/preset-react": "^7.10.4",
+    "@jho406/breezy": "^0.20.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "breakpoint-sass": "2.7.1",
