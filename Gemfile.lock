@@ -87,6 +87,10 @@ GEM
     ffi (1.15.3)
     globalid (0.5.2)
       activesupport (>= 5.0)
+    humid (0.0.5)
+      activesupport (>= 6.0)
+      mini_racer (>= 0.4)
+      webpacker (>= 4.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     inline_svg (1.7.2)
@@ -94,6 +98,7 @@ GEM
       nokogiri (>= 1.6)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    libv8-node (15.14.0.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -107,6 +112,8 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.1)
     mini_portile2 (2.6.1)
+    mini_racer (0.4.0)
+      libv8-node (~> 15.14.0.0)
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.8)
@@ -220,6 +227,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   factory_bot (~> 5.0.0)
+  humid
   inline_svg
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)

@@ -3,7 +3,7 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import reduceReducers from 'reduce-reducers';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { render } from 'react-dom';
+import { hydrate } from 'react-dom';
 import { ApplicationBase } from '@jho406/breezy';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
@@ -27,7 +27,7 @@ if (typeof window !== "undefined") {
     const location = window.location;
 
     if (appEl) {
-      render(
+      hydrate(
         <Application
           appEl={appEl}
           // The base url prefixed to all calls made by the `visit`
