@@ -9,6 +9,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { applicationRootReducer, applicationPagesReducer } from './reducer';
 import { buildVisitAndRemote } from './application_visit';
+import SeatsIndex from 'views/seats/index'
 
 // Mapping between your props template to Component, you must add to this
 // to register any new page level component you create. If you are using the
@@ -16,6 +17,7 @@ import { buildVisitAndRemote } from './application_visit';
 //
 // e.g {'posts/new': PostNew}
 const identifierToComponentMapping = {
+  'seats/index': SeatsIndex
 };
 
 if (typeof window !== "undefined") {
