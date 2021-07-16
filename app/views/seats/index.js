@@ -18,11 +18,25 @@ export default (props) => {
     filters,
     setMaximum,
     pageKey,
+    copyPage,
+    navigateTo,
   } = props
 
   const handleFilter = (event, maximum) => {
-    setMaximum(pageKey, maximum)
     event.stopPropagation()
+    const nextUrl = new URL(document.location)
+
+    if (maximum !== Infinity) {
+      nextUrl.searchParams.set("maximum", maximum)
+      copyPage({from: pageKey, to: nextUrl.href})
+      setMaximum(nextUrl.href, maximum)
+      navigateTo(nextUrl.href)
+    } else {
+      nextUrl.searchParams.delete("maximum")
+      navigateTo(pageKey, {
+        action: 'replace'
+      })
+    }
   }
 
   return (
