@@ -1,6 +1,7 @@
 import React from 'react'
 import SeatDialog from 'components/SeatDialog'
 import Cart from 'components/Cart'
+import SeatFilter from 'components/SeatFilter'
 import SeatingMap from 'components/SeatingMap'
 import SeatingLegend from 'components/SeatingLegend'
 import FloorSwitcher from 'components/FloorSwitcher'
@@ -13,6 +14,7 @@ export default (props) => {
     cart,
     seat,
     floors,
+    filters,
   } = props
 
   return (
@@ -34,6 +36,7 @@ export default (props) => {
             <SeatingMap sections={sections} />
           </div>
           <div className="syos-frame__sidebar">
+            <SeatFilter filters={filters} />
             <Cart cart={cart} />
           </div>
         </section>
