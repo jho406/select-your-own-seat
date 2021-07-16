@@ -16,7 +16,14 @@ export default (props) => {
     seat,
     floors,
     filters,
+    setMaximum,
+    pageKey,
   } = props
+
+  const handleFilter = (event, maximum) => {
+    setMaximum(pageKey, maximum)
+    event.stopPropagation()
+  }
 
   return (
     <Layout {...props}>
@@ -37,7 +44,7 @@ export default (props) => {
             <SeatingMap {...seatingMap} />
           </div>
           <div className="syos-frame__sidebar">
-            <SeatFilter {...filters} />
+            <SeatFilter {...filters} onFilter={handleFilter}/>
             <Cart cart={cart} />
           </div>
         </section>
