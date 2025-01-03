@@ -52,3 +52,4 @@ gem 'superglue', path: '/Users/johnyho/superglue/superglue_rails'
 
 gem "form_props", "~> 0.2.1"
 gem 'active_link_to'
+gem 'humid'
